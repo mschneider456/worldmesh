@@ -5,14 +5,13 @@ WorldMesh generates arbitrarily large multi-room 3D scenes efficiently using mes
 
 **Accepted to ECCV 2026** 🎉
 
-[[arXiv](https://arxiv.org/abs/2603.22972)] [[Project Page](https://mschneider456.github.io/world-mesh/)] [[Video](https://youtu.be/MKMEbPT38-s)] [[Dataset](https://mschneider456.github.io/world-mesh/)]
+[[arXiv](https://arxiv.org/abs/2603.22972)] [[Project Page](https://mschneider456.github.io/world-mesh/)] [[Video](https://youtu.be/MKMEbPT38-s)] [[Dataset](https://huggingface.co/datasets/mas456/worldmesh)]
 
 ![Teaser](./teaser.jpg)
 
 ## Dataset
 
-We release a dataset of multi-room 3D scenes generated with WorldMesh. See the
-[project page](https://mschneider456.github.io/world-mesh/) for the download link.
+We release a dataset of multi-room 3D scenes generated with WorldMesh [here](https://huggingface.co/datasets/mas456/worldmesh).
 
 ## Quick Start
 
