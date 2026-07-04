@@ -1,0 +1,243 @@
+WorldMesh License
+
+Copyright (c) 2026 Manuel-Andreas Schneider
+
+This file is a summary notice for the top-level licensing structure of this
+repository. It is not a complete inventory of every transitive dependency
+installed through pip, conda, or system packages.
+
+## Core WorldMesh Code
+
+The core WorldMesh implementation, excluding the third-party components listed
+below, is licensed under the MIT License:
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Bundled Third-Party Components
+
+The following upstream codebases are bundled in this repository and remain
+subject to their own upstream licenses:
+
+### 1. SAM 3 (`sam3/`)
+
+Licensed under the SAM License.
+
+See `sam3/LICENSE` for the full license text.
+
+Official sources:
+- https://github.com/facebookresearch/sam3
+- https://huggingface.co/facebook/sam3
+
+The bundled `sam3/` subtree and the corresponding upstream checkpoints are
+subject to the SAM License.
+
+### 2. SAM 3D Objects (`sam-3d-objects/`)
+
+Licensed under the SAM License.
+
+See `sam-3d-objects/LICENSE` for the full license text.
+
+Official source:
+- https://github.com/facebookresearch/sam-3d-objects
+
+The bundled `sam-3d-objects/` subtree and the corresponding upstream
+checkpoints are subject to the SAM License.
+
+### 3. ComfyUI (`comfyui/`)
+
+Licensed under the GNU General Public License, Version 3.
+
+See `comfyui/LICENSE` for the full license text.
+
+Official source:
+- https://github.com/comfyanonymous/ComfyUI
+
+### 4. Depth Pro (`ml-depth-pro/`)
+
+Licensed under Apple's LICENSE terms.
+
+See `ml-depth-pro/LICENSE` for the full license text.
+
+Additional third-party notices are provided in
+`ml-depth-pro/ACKNOWLEDGEMENTS.md`.
+
+Official source:
+- https://github.com/apple/ml-depth-pro
+
+The bundled Depth Pro code and the upstream Depth Pro model weights are both
+released under the LICENSE terms referenced above.
+
+### 5. Nerfstudio (`nerfstudio/`)
+
+Licensed under the Apache License, Version 2.0.
+
+See `nerfstudio/LICENSE` for the full license text.
+See also: https://www.apache.org/licenses/LICENSE-2.0
+
+Official source:
+- https://github.com/nerfstudio-project/nerfstudio
+
+## External Model Weights Referenced By Workflows Or Setup
+
+This repository ships ComfyUI workflow definitions and setup instructions that
+reference or download additional model weights. Those weights are not bundled
+in this repository unless a user downloads them separately. Their upstream
+licenses apply independently.
+
+### 6. FLUX.2 [klein] 9B / 9B Base model family
+
+The shipped workflows under `comfyui/scenes_workflows/` reference FLUX.2
+[klein] 9B model files such as:
+- `flux-2-klein-base-9b-fp8.safetensors`
+- `flux-2-klein-9b-fp8.safetensors`
+
+The upstream FLUX.2 [klein] 9B family is published under a FLUX
+Non-Commercial license on its Hugging Face model pages.
+
+Official sources:
+- https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8
+- https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9b-fp8
+
+IMPORTANT: Using the FLUX.2 [klein] 9B family is restricted by the upstream
+non-commercial terms.
+
+### 7. Qwen model families and Qwen-derived artifacts
+
+The shipped workflows under `comfyui/scenes_workflows/` reference Qwen-based
+model files such as:
+- `qwen_image_edit_2509_fp8_e4m3fn.safetensors`
+- `Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors`
+- `qwen_2.5_vl_7b_fp8_scaled.safetensors`
+- `qwen_3_8b_fp8mixed.safetensors`
+
+Official Qwen model families referenced by those local filenames include:
+- Qwen-Image-Edit
+- Qwen2.5-VL
+- Qwen3
+
+The corresponding upstream model pages state Apache License 2.0:
+- https://huggingface.co/Qwen/Qwen-Image-Edit-2509
+- https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct
+- https://huggingface.co/Qwen/Qwen3-8B
+- https://www.apache.org/licenses/LICENSE-2.0
+
+This repository also references `lightx2v/Qwen-Image-Lightning`, whose model
+page states Apache License 2.0:
+- https://huggingface.co/lightx2v/Qwen-Image-Lightning
+
+Some local workflow filenames are ComfyUI-oriented repackagings,
+quantizations, or format conversions of upstream Qwen model families. If you
+download a repackaged artifact, check both the original model-family license
+and the page from which the packaged artifact is obtained.
+
+### 8. FLUX support artifacts used by current setup instructions
+
+The current `setup.sh` downloads the following files when they are missing:
+- `flux2-vae.safetensors`
+- `qwen_3_8b_fp8mixed.safetensors`
+
+The current setup source for those files is:
+- https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-9b
+
+Those support artifacts are not bundled in this repository. They are obtained
+separately, may be packaging-specific, and should be checked against the
+upstream source page actually used at download time together with the
+underlying model-family terms.
+
+## Source-Installed Setup-Time Dependencies
+
+The setup process also installs some third-party code directly from upstream
+GitHub repositories. Those source trees are not bundled here merely by being
+installed during setup, but their upstream licenses still apply to use,
+redistribution, and packaging of those installed components.
+
+### 9. GitHub source installs used by setup
+
+Current examples from `setup.sh` include:
+
+- `NVlabs/nvdiffrast`, published under a BSD-style license in its upstream
+  `LICENSE.txt`
+  - https://github.com/NVlabs/nvdiffrast
+- `NVlabs/tiny-cuda-nn`, published under a BSD-style license in its upstream
+  `LICENSE.txt`
+  - https://github.com/NVlabs/tiny-cuda-nn
+- `autonomousvision/mip-splatting`, whose upstream repository is published
+  under the Gaussian-Splatting License with research and non-commercial
+  restrictions
+  - https://github.com/autonomousvision/mip-splatting
+
+The setup script uses the `mip-splatting` source tree as the installation
+source for `diff-gaussian-rasterization`. If you package or redistribute that
+installed code, review the exact upstream source tree and license files that
+were used.
+
+### 10. Direct Git dependencies exposed through bundled subprojects
+
+The bundled `sam-3d-objects/` dependency files also reference additional
+upstream Git-based dependencies, including:
+
+- `nerfstudio-project/gsplat`, Apache License 2.0
+  - https://github.com/nerfstudio-project/gsplat
+- `facebookresearch/pytorch3d`, BSD License
+  - https://github.com/facebookresearch/pytorch3d
+- `microsoft/MoGe`, MIT License, with Apache 2.0-licensed DINOv2 code inside
+  the upstream MoGe repository
+  - https://github.com/microsoft/MoGe
+
+These are not bundled in the repository root merely by being declared in
+dependency files, but their upstream terms still apply if they are installed,
+packaged, or redistributed.
+
+## Usage Notes
+
+1. The original WorldMesh code is MIT-licensed, but each third-party component
+   listed above remains subject to its own license.
+
+2. If you download or use external model weights or setup-time source
+   dependencies referenced by this repository, you must comply with their
+   upstream terms even when those files are not bundled in this repository.
+
+3. If you redistribute the bundled `comfyui/` subtree or derivative works of
+   it, you must comply with the GNU GPL v3 terms applicable to that component.
+
+4. The SAM License applies to the bundled `sam3/` and `sam-3d-objects/`
+   components and to the corresponding upstream checkpoints. Among other terms,
+   it requires acknowledgement of SAM materials in research publications.
+
+5. Depth Pro includes additional upstream acknowledgements in
+   `ml-depth-pro/ACKNOWLEDGEMENTS.md`.
+
+6. This summary is not exhaustive for every transitive pip, conda, or system
+   dependency used during development or runtime.
+
+7. If a third-party license or notice was missed in this summary, that omission
+   does not remove the upstream licensor's rights or your compliance
+   obligations. The practical remediation is typically to identify the omitted
+   component, add the missing notice or attribution, and if necessary stop
+   redistributing the affected bundle until the licensing position is corrected.
+
+8. This file is intended as a practical summary for the public source
+   repository. Commercial deployment, packaged redistribution, container
+   distribution, or bundling of downloaded checkpoints should be reviewed
+   separately against the exact upstream artifacts used.
+
+9. For complete terms, consult the linked upstream license files, model pages,
+   and local vendored license files.
