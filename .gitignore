@@ -1,0 +1,32 @@
+renders/
+.claude/
+sam-3d-objects/outputs
+renders_structure_only/
+scene_structure_only.glb
+__pycache__/
+generations/
+sam2/
+sam3/outputs
+output/
+outputs/
+output_old/
+outputs_old/
+final_output/
+scene_6rooms_rectangle.zip
+scenes_generated/
+tmp/
+user_scenes/
+user_worlds/
+user_layouts/
+AGENTS.md
+CLAUDE.md
+
+# Depth Pro
+ml-depth-pro/checkpoints/
+
+# Python packaging
+*.egg-info/
+
+# macOS
+.DS_Store
+*.DS_Store

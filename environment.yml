@@ -1,0 +1,20 @@
+name: worldmesh
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - matplotlib
+  - pillow
+  - pip
+  - pip:
+    - anthropic
+    - typer
+    - trimesh
+    - shapely
+    - pyrender
+    - PyOpenGL
+    - PyOpenGL_accelerate
+    - mapbox-earcut
+    - manifold3d

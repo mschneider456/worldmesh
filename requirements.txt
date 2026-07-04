@@ -1,0 +1,28 @@
+# Core 3D mesh processing
+trimesh
+shapely
+
+# Rendering
+pyrender
+PyOpenGL
+PyOpenGL_accelerate
+
+# Triangulation engines
+mapbox-earcut
+manifold3d
+
+# Numerical and image processing
+numpy
+pillow
+opencv-python
+
+# API clients
+anthropic
+typer
+
+# Visualization
+matplotlib
+
+# Optional: For better performance
+# scipy
+# networkx

@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "units": "meters",
+    "coordinate_system": "z_up",
+    "wall_thickness": 0.15,
+    "default_ceiling_height": 2.8
+  },
+  "rooms": [
+    {
+      "id": "media_room",
+      "name": "Media Room",
+      "floor_polygon": [[0, 0], [6, 0], [6, 5], [0, 5]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "door", "wall_segment": [[6, 0], [6, 5]], "position": 2.05, "width": 0.9, "height": 2.1},
+        {"type": "window", "wall_segment": [[0, 0], [6, 0]], "position": 2.25, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[0, 5], [0, 0]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[6, 5], [0, 5]], "position": 2.25, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "living_room",
+      "name": "Living Room",
+      "floor_polygon": [[6, 0], [12, 0], [12, 5], [6, 5]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "door", "wall_segment": [[12, 0], [12, 5]], "position": 2.05, "width": 0.9, "height": 2.1},
+        {"type": "door", "wall_segment": [[12, 5], [6, 5]], "position": 2.55, "width": 0.9, "height": 2.1},
+        {"type": "window", "wall_segment": [[6, 0], [12, 0]], "position": 2.25, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "breakfast_room",
+      "name": "Breakfast Room",
+      "floor_polygon": [[12, 0], [18, 0], [18, 5], [12, 5]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "window", "wall_segment": [[12, 0], [18, 0]], "position": 2.25, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[18, 0], [18, 5]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[18, 5], [12, 5]], "position": 2.25, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "home_office",
+      "name": "Home Office",
+      "floor_polygon": [[6, 5], [12, 5], [12, 10], [6, 10]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "door", "wall_segment": [[12, 10], [6, 10]], "position": 2.55, "width": 0.9, "height": 2.1},
+        {"type": "window", "wall_segment": [[12, 5], [12, 10]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[6, 10], [6, 5]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "master_bedroom",
+      "name": "Master Bedroom",
+      "floor_polygon": [[6, 10], [12, 10], [12, 15], [6, 15]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "door", "wall_segment": [[12, 15], [6, 15]], "position": 2.55, "width": 0.9, "height": 2.1},
+        {"type": "window", "wall_segment": [[12, 10], [12, 15]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[6, 15], [6, 10]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "guest_bedroom",
+      "name": "Guest Bedroom",
+      "floor_polygon": [[6, 15], [12, 15], [12, 20], [6, 20]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "door", "wall_segment": [[12, 20], [6, 20]], "position": 2.55, "width": 0.9, "height": 2.1},
+        {"type": "window", "wall_segment": [[12, 15], [12, 20]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[6, 20], [6, 15]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "nursery",
+      "name": "Nursery",
+      "floor_polygon": [[6, 20], [12, 20], [12, 25], [6, 25]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "window", "wall_segment": [[12, 20], [12, 25]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[12, 25], [6, 25]], "position": 2.25, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[6, 25], [6, 20]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    }
+  ],
+  "objects": []
+}

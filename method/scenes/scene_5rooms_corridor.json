@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "units": "meters",
+    "coordinate_system": "z_up",
+    "wall_thickness": 0.15,
+    "default_ceiling_height": 2.8
+  },
+  "rooms": [
+    {
+      "id": "study",
+      "name": "Study",
+      "floor_polygon": [[0, 0], [5, 0], [5, 5], [0, 5]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "door", "wall_segment": [[5, 0], [5, 5]], "position": 2.05, "width": 0.9, "height": 2.1},
+        {"type": "window", "wall_segment": [[0, 0], [5, 0]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[5, 5], [0, 5]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[0, 5], [0, 0]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "hallway",
+      "name": "Hallway",
+      "floor_polygon": [[5, 0], [9, 0], [9, 5], [5, 5]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "door", "wall_segment": [[9, 0], [9, 5]], "position": 2.05, "width": 0.9, "height": 2.1},
+        {"type": "door", "wall_segment": [[9, 5], [5, 5]], "position": 1.55, "width": 0.9, "height": 2.1},
+        {"type": "window", "wall_segment": [[5, 0], [9, 0]], "position": 1.4, "width": 1.2, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "living_room",
+      "name": "Living Room",
+      "floor_polygon": [[9, 0], [14, 0], [14, 5], [9, 5]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "window", "wall_segment": [[9, 0], [14, 0]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[14, 0], [14, 5]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[14, 5], [9, 5]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "master_bedroom",
+      "name": "Master Bedroom",
+      "floor_polygon": [[5, 5], [9, 5], [9, 10], [5, 10]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "door", "wall_segment": [[9, 10], [5, 10]], "position": 1.55, "width": 0.9, "height": 2.1},
+        {"type": "window", "wall_segment": [[9, 5], [9, 10]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[5, 10], [5, 5]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    },
+    {
+      "id": "guest_bedroom",
+      "name": "Guest Bedroom",
+      "floor_polygon": [[5, 10], [9, 10], [9, 15], [5, 15]],
+      "ceiling_height": 2.8,
+      "openings": [
+        {"type": "window", "wall_segment": [[9, 10], [9, 15]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[9, 15], [5, 15]], "position": 1.4, "width": 1.2, "height": 1.2, "sill_height": 0.9},
+        {"type": "window", "wall_segment": [[5, 15], [5, 10]], "position": 1.75, "width": 1.5, "height": 1.2, "sill_height": 0.9}
+      ]
+    }
+  ],
+  "objects": []
+}
